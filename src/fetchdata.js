@@ -1,7 +1,7 @@
 import Header from "./Header";
 // const ApiKey = '99d16f14510e45ac8259cf9ddcffefd2';
  
-// const ApiKey ='pub_355116beb840e8244d1e332dd636350c12f26';
+
 // const ApiKey='EInbGooBxCZnBmh7nV34-YcQ99C1Cyp0kg83Cs7oydLDP-Kx';
 // let contents = [];
 
@@ -57,8 +57,9 @@ import Header from "./Header";
 
 function displaynews(topic) {
     return new Promise((resolve, reject) => {
-        const ApiKey = '16c1ce1e03a1404e80a852edfe61f775' ;
-        let url = `https://newsapi.org/v2/everything?apikey=${ApiKey}&q=${topic}`;
+       // const ApiKey = '16c1ce1e03a1404e80a852edfe61f775' ;
+     const ApiKey ='pub_355116beb840e8244d1e332dd636350c12f26';
+        let url = `https://newsdata.io/api/1/news??apikey=${ApiKey}&q=${topic}&language=en`;
         let contents = [];
 
         fetch(url)
@@ -68,9 +69,9 @@ function displaynews(topic) {
                 for (let i = 0; i < 10; i++) {
                     let obj = {
                         id: i+1,
-                        title: data.articles[i].title,
-                        text: data.articles[i].description,
-                        link: data.articles[i].url,
+                        title: data.results[i].title,
+                        text: data.results[i].description,
+                        link: data.articles[i].link,
                         // image:data.atrtciles[i].urlToImage
                     };
                     contents.push(obj);

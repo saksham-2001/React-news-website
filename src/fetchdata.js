@@ -71,7 +71,7 @@ function displaynews(topic) {
                         id: i+1,
                         title: data.results[i].title,
                         text: data.results[i].description,
-                        link: data.articles[i].link,
+                        link: data.results[i].link,
                         // image:data.atrtciles[i].urlToImage
                     };
                     contents.push(obj);

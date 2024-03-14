@@ -1,0 +1,115 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+.card_light{
+     display: flex;
+     flex-direction: column;
+    height:auto ;
+    margin:40px;
+    
+   
+
+    padding:10px;
+    background-blend-mode: hard-light;
+    /* transition: all 1s ease-in-out; */
+    /* background-color:#B0E0E6; */
+    /* background-color:white; */
+
+    /* color: white; */
+    padding-top:20px;
+    padding-bottom:20px ;
+    padding-left: 20px;
+    border-radius: 20px;
+    background-color: antiquewhite;
+
+
+
+
+
+
+}
+
+.card_light:hover{
+
+transition: all 1s ease-in-out;
+    /* cursor:context-menu;  */
+    /* background-color: rgba(0, 0, 0);
+    color: white;    */
+   
+    font-size: 1.5rem;
+   
+
+}
+.myheading_light{
+    padding:10px;
+    /* text-align: center; */
+
+}
+.myheading_dark{
+    padding:10px;
+    color:#8A2BE2;
+
+    /* text-align: center; */
+
+}
+.italictext_light{
+    font-style: italic;
+    font-size: 1.2rem;
+}
+.italictext_dark{
+    font-style: italic;
+    font-size: 1.2rem;
+    color:#FF1493 ;
+}
+.mytext_light{
+    padding: 5px ;
+    line-height: 1.8;
+    font-size: 1.2rem;
+    /* text-align: center; */
+
+}
+.mytext_dark{
+    padding: 5px ;
+    line-height: 1.8;
+    font-size: 1.2rem;
+   
+    
+
+    
+    /* text-align: center; */
+
+}
+.link{
+    text-decoration: none;
+}
+.card_dark{
+    display: flex;
+     flex-direction: column;
+    height:auto ;
+    margin:40px;
+    background-blend-mode: hard-light;
+    /* transition: all 1s ease-in-out; */
+    padding-top:20px;
+    padding-bottom:20px ;
+    padding-left: 20px;
+    /* border: 2px solid #FF1493; */
+    border-radius: 20px;
+
+    padding:10px;
+    background-color: black;
+    color:white;
+
+}
+.card_dark:hover{
+
+transition: all 1s ease-in-out;
+     
+    /* background-color: rgba(0, 0, 0);
+    color: white;    */
+   
+    font-size: 1.3rem;
+    /* background-color: rgb(70, 70, 70); */
+      border: 2px solid #FF1493;
+
+
+}

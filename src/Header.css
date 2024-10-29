@@ -1,96 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Satisfy&display=swap');
-.header_light{
-    display: flex;
-    /* justify-content: space-evenly; */
-    align-items: center;
-    width: 100%;
-    height:80px;
-    background-color: white;
-    /* margin-top:20px; */
-    /* transition: all 1s ease-in-out; */
-    margin-bottom: 60px;
-    padding-top:20px;
-    padding-bottom: 20px;
-    }
-    .header_dark{
-        /* box-sizing: border-box; */
-        display: flex;
-        /* justify-content: space-evenly; */
-        align-items: center;
-        width: 100%;
-        /* height:200px; */
-        background-color:black;
-        color: white;
-        /* margin-top:20px; */
-        /* transition: all 1s ease-in-out; */
-        margin-bottom: 20px;
-        padding-top:10px;
-        padding-bottom: 10px;
-        /* border: 2px solid cyan; */
-        }
-    
-
-.searchbox{
-
-    height: 50px;
-    /* /* margin-top:70px; */
-margin-left:100px;
-display: flex;
-align-items: center;
-
-
-}
-.title_light{
-    display:inline;
-    margin-left:140px;
-    font-size: 3.5em;
-    font-family: "Satisfy", cursive;
-}
-.title_dark{
-    display:inline;
-    margin-left:140px;
-    font-size: 3.5em;
-    font-family: "Satisfy", cursive;
-    color: cyan;
-}
-.mybutton_light{
-    color: white;
-    width:70px;
-    text-align: center;
-
-    background-color: black;
-    border-radius: 5px;
-}
-.mybutton_light:hover{ 
-    cursor:pointer;
-}
-.mybutton_dark{
-    color: black;
-    width:70px;
-    text-align: center;
-
-    background-color: white;
-    border-radius: 10px solid white; 
+.header_light,
+.header_dark {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center vertically */
+    justify-content: space-between; /* Space items evenly */
+    padding: 10px; /* Add some padding */
+    margin-bottom: 20px;
 }
 
-.mybutton_dark:hover{ 
-    cursor:pointer;
+.appTitle_light,
+.appTitle_dark {
+    margin: 0; /* Remove default margin from header */
+    font-size: 24px; /* Adjust font size as needed */
 }
-.logo{
-    width: 100px;
-    margin-left:20px
+
+.searchForm_light,
+.searchForm_dark {
+    display: flex; /* Keep form items in a row */
+    margin-right: 20px; /* Space between search form and toggle button */
 }
-/* .subheader{
- display: flex;
- justify-content: space-around;  
- padding: 20px; 
-} */
-.icon{
-    margin-left: 80px;
-    width: 80px;
+
+.searchInput_light,
+.searchInput_dark {
     padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    width: 200px; /* Adjust width as needed */
 }
-.icon:hover{
+
+.searchButton_light,
+.searchButton_dark {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
     cursor: pointer;
-  
+}
+
+.searchButton_light:hover,
+.searchButton_dark:hover {
+    background-color: #0056b3;
+}
+.modeIcon{
+    padding: 10px 15px;
+    border: none;
+    width:100px;
+    /* border-radius: 200px; */
+    /* background-color: #007bff; */
+    color: white;
+    cursor: pointer;
+    margin-left: 10px; /* Add space between the search and mode toggle buttons */
+}
+@media (max-width: 768px){
+    
+.appTitle_light,
+.appTitle_dark {
+    font-size: 20px;
+}
+
+.searchInput_light,
+.searchInput_dark {
+    width:100px
+}
 }

@@ -2,59 +2,72 @@ import Header from "./Header";
 // const ApiKey = '99d16f14510e45ac8259cf9ddcffefd2';
  
 const ApiKey ='pub_355116beb840e8244d1e332dd636350c12f26';
-// const ApiKey='EInbGooBxCZnBmh7nV34-YcQ99C1Cyp0kg83Cs7oydLDP-Kx';
-// let contents = [];
 
-// function displaynews(topic){
-//     // contents=[];
-// // let url= 'https://inshorts.deta.dev/news?category="technology"';
-// let url = `https://newsapi.org/v2/everything?apikey=${ApiKey}&q=${topic}`;
-// // let url = `https://newsdata.io/api/1/news?apikey=${ApiKey}&q="${topic}"&language=en`;
-// // let url =`https://api.currentsapi.services/v1/search?keywords=${topic}&language=en&apiKey=${ApiKey}`;
-// contents=[];
-// fetch(url).then((res) => {
-//     return res.json()
-// }).then((data) => {
-//     let Data = data;
-//     console.log(Data);
-    
-//     if (contents.length === 0) {
-//         for (let i = 0; i < 10; i++) {
-//         //    console.log (Data.news[i].title);
-//             let obj = {
-//                 // id: Data.articles[i].id,
-//               title: Data.articles[i].title,
-//                 text: Data.articles[i].description
-//             };
-            
-//             // obj.title=Data.results.title;
-//             // obj.text=Data.results.description;
-//             contents.push(obj);
-//             // obj ={title:'',text:''}
-//         }
-
-//     }
-//     // console.log(contents);
-//     return contents;
-   
-// }
-// );
-
-
-
-  
-// }
-
-
-// function ReturnData() {
-//     // displaynews("trending");
-//     return contents;
-  
-
-//     // console.log(contents); 
-
-// }
-
+// Function to generate sample data
+function generateSampleData() {
+    return [
+        {
+            id: 1,
+            title: "Sample News Title 1",
+            text: "This is a description for the first sample news article.",
+            link: "#", // Sample link
+        },
+        {
+            id: 2,
+            title: "Sample News Title 2",
+            text: "This is a description for the second sample news article.",
+            link: "#",
+        },
+        {
+            id: 3,
+            title: "Sample News Title 3",
+            text: "This is a description for the third sample news article.",
+            link: "#",
+        },
+        {
+            id: 4,
+            title: "Sample News Title 4",
+            text: "This is a description for the fourth sample news article.",
+            link: "#",
+        },
+        {
+            id: 5,
+            title: "Sample News Title 5",
+            text: "This is a description for the fifth sample news article.",
+            link: "#",
+        },
+        {
+            id: 6,
+            title: "Sample News Title 6",
+            text: "This is a description for the sixth sample news article.",
+            link: "#",
+        },
+        {
+            id: 7,
+            title: "Sample News Title 7",
+            text: "This is a description for the seventh sample news article.",
+            link: "#",
+        },
+        {
+            id: 8,
+            title: "Sample News Title 8",
+            text: "This is a description for the eighth sample news article.",
+            link: "#",
+        },
+        {
+            id: 9,
+            title: "Sample News Title 9",
+            text: "This is a description for the ninth sample news article.",
+            link: "#",
+        },
+        {
+            id: 10,
+            title: "Sample News Title 10",
+            text: "This is a description for the tenth sample news article.",
+            link: "#",
+        },
+    ];
+}
 function displaynews(topic) {
     return new Promise((resolve, reject) => {
         // const ApiKey = '16c1ce1e03a1404e80a852edfe61f775' ;
@@ -81,19 +94,14 @@ function displaynews(topic) {
             })
             .catch((error) => {
                 console.error("Error fetching data:", error);
-                reject(error);
+                // reject(error);
+                console.log("This is sample data being shown");
+                resolve(generateSampleData());
             });
     });
 }
 
-//  export async function displayweather(){
-//     const Apikey=`c9c45efa09f3f9f8f8d299038997ca97`;
-//     let url=`http://api.openweathermap.org/data/2.5/weather?q=Adelaide&id=524901&appid=${Apikey}`;
-//     let res= await fetch(url);
-//     let data = await res.json();
-//     console.log(data);
 
-//  }
 
 
 export default displaynews

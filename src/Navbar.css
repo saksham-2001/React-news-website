@@ -1,56 +1,167 @@
-.navbar_light{
-    width:100%;
-    height: 60px;
-    /* color:#E9D66B ; */
-    /* background-color:#FFB6C1; */
-    background-color: white;
-    /* transition: all 1s ease-in-out; */
+/* Navbar.css */
 
-   
+/* Base styles for the navbar */
+.navbar_light,
+.navbar_dark {
     display: flex;
-    justify-content: space-evenly;
-    text-align: center;
     align-items: center;
-    /* padding: 5px; */
-    margin-top: 20px;
-
+    padding: 10px;
+    background-color: #fff;
+    /* Light mode background */
+    color: #000;
+    /* Light mode text color */
+    position: relative;
+    transition: background-color 0.3s, color 0.3s;
+    /* Smooth transition for background and text colors */
 }
-.navbar_dark{
-    width:100%;
-    height: 60px;
-    /* color:#E9D66B ; */
-    /* background-color:#89CFF0; */
-    /* transition: all 1s ease-in-out; */
-    background-color:black;
-    color: white;
 
-   
+.navbar_dark {
+    background-color: #333;
+    /* Dark mode background */
+    color: #fff;
+    /* Dark mode text color */
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    /* Hidden on larger screens */
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: auto;
+    /* Align to the left */
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: #333;
+    /* Color of the hamburger lines */
+    margin: 3px 0;
+    /* Space between bars */
+}
+
+/* Menu styles for smaller screens */
+.menu {
+    display: none;
+    /* Hidden by default */
+    flex-direction: column;
+    /* Vertical layout for mobile */
+    position: absolute;
+    /* Positioned absolutely */
+    top: 50px;
+    /* Adjust depending on your navbar height */
+    left: 10px;
+    /* Positioning */
+    background-color: #fff;
+    /* Light mode background */
+    color: #000;
+    /* Light mode text color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    /* Ensure it is above other content */
+    transition: background-color 0.3s, color 0.3s;
+    /* Smooth transition */
+}
+
+/* Show the menu when active */
+.menu.active {
     display: flex;
-    justify-content: space-evenly;
-    text-align: center;
-    align-items: center;
-    /* padding: 5px; */
-  
+    /* Show menu */
 }
-.keyTopic_light{
-    font-size: 1.2rem;
-    font-family: 'Times New Roman', Times, serif;
-    color: #fa8a9b;
-} 
-.keyTopic_light:hover{
-    cursor: pointer;
-    font-size: 1.7rem;
-   color: #FF1493;
+
+.menu.hidden {
+    display: none;
 }
-.keyTopic_dark{
-    font-size: 1.2rem;
-    font-family: 'Times New Roman', Times, serif;
-    color: #FF1493;
-   
-} 
-.keyTopic_dark:hover{
-    cursor: pointer;
-    font-size: 1.7rem;
- 
+
+/* Responsive styles */
+@media (max-width: 768px) {
+   /* Adjust the width as needed */
+    .hamburger {
+        display: flex;
+        /* Show on smaller screens */
+      margin-top: -10px;
+    }
+
+    .menu_light,
+    .menu_dark {
+        display: flex;
+        /* Flex display for mobile */
+    }
+
+    .menu_dark {
+        background-color: #333;
+        /* Dark mode background */
+        color: #fff;
+        /* Dark mode text color */
+    }
+
+    .keyTopic_light,
+    .keyTopic_dark {
+        padding: 10px;
+        cursor: pointer;
+        border-bottom: 1px solid #ddd;
+        /* Optional separator */
+        transition: background-color 0.3s;
+        /* Smooth transition */
+    }
+
+    .keyTopic_light:hover {
+        background-color: #f0f0f0;
+        /* Hover effect for light mode */
+    }
+
+    .keyTopic_dark:hover {
+        background-color: #444;
+        /* Hover effect for dark mode */
+    }
+}
+
+/* Styles for larger screens */
+@media (min-width: 769px) {
+    .menu.hidden {
+        display: flex;
+    }
+
+    .menu_light,
+    .menu_dark {
+        display: flex;
+        /* Always show menu on larger screens */
+        flex-direction: row;
+        /* Horizontal layout */
+        justify-content: space-around;
+        position: static;
+        /* Reset position */
+        box-shadow: none;
+        /* Remove shadow */
+        width: 100%;
+        /* Make the menu take up full width */
+        height: auto;
+        /* Allow height to adjust based on content */
+        transition: box-shadow 0.3s ease;
+        /* Smooth transition for box shadow */
+        margin-bottom: 20px;
+    }
+
+    .keyTopic_light,
+    .keyTopic_dark {
+        margin: 0 10px;
+        /* Spacing between menu items */
+        border-bottom: none;
+        /* No separator for larger screens */
+        font-size: 18px;
+        /* Increase text size */
+        transition: font-size 0.5s ease, font-style 0.5s ease; /* Smooth transition */
+        cursor: pointer;
+        /* Change cursor on hover */
+    }
+     
     
+
+    
+    
+    .keyTopic_light:hover {
+        font-size: 25px;
+        font-style: italic;
+    }
 }

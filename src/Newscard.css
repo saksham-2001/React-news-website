@@ -1,115 +1,69 @@
-*{
-    font-family: 'Times New Roman', Times, serif;
-}
-.card_light{
-     display: flex;
-     flex-direction: column;
-    height:auto ;
-    margin:40px;
-    
-   
-
-    padding:10px;
-    background-blend-mode: hard-light;
-    /* transition: all 1s ease-in-out; */
-    /* background-color:#B0E0E6; */
-    /* background-color:white; */
-
-    /* color: white; */
-    padding-top:20px;
-    padding-bottom:20px ;
-    padding-left: 20px;
-    border-radius: 20px;
-    background-color: antiquewhite;
-
-
-
-
-
-
-}
-
-.card_light:hover{
-
-transition: all 1s ease-in-out;
-    /* cursor:context-menu;  */
-    /* background-color: rgba(0, 0, 0);
-    color: white;    */
-   
-    font-size: 1.5rem;
-   
-
-}
-.myheading_light{
-    padding:10px;
-    /* text-align: center; */
-
-}
-.myheading_dark{
-    padding:10px;
-    color:#8A2BE2;
-
-    /* text-align: center; */
-
-}
-.italictext_light{
-    font-style: italic;
-    font-size: 1.2rem;
-}
-.italictext_dark{
-    font-style: italic;
-    font-size: 1.2rem;
-    color:#FF1493 ;
-}
-.mytext_light{
-    padding: 5px ;
-    line-height: 1.8;
-    font-size: 1.2rem;
-    /* text-align: center; */
-
-}
-.mytext_dark{
-    padding: 5px ;
-    line-height: 1.8;
-    font-size: 1.2rem;
-   
-    
-
-    
-    /* text-align: center; */
-
-}
-.link{
-    text-decoration: none;
-}
-.card_dark{
+/* Base Card Styling */
+.card_light, .card_dark {
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
     display: flex;
-     flex-direction: column;
-    height:auto ;
-    margin:40px;
-    background-blend-mode: hard-light;
-    /* transition: all 1s ease-in-out; */
-    padding-top:20px;
-    padding-bottom:20px ;
-    padding-left: 20px;
-    /* border: 2px solid #FF1493; */
-    border-radius: 20px;
-
-    padding:10px;
-    background-color: black;
-    color:white;
-
-}
-.card_dark:hover{
-
-transition: all 1s ease-in-out;
-     
-    /* background-color: rgba(0, 0, 0);
-    color: white;    */
-   
-    font-size: 1.3rem;
-    /* background-color: rgb(70, 70, 70); */
-      border: 2px solid #FF1493;
-
-
-}
+    flex-direction: column;
+    /* width: 100%; Fixed width for cards */
+    margin: 10px; /* Add spacing between cards */
+    /* margin-left: 20px; */
+    /* margin-right: 20px; */
+  }
+  
+  /* Light Mode Card */
+  .card_light {
+    background-color: #ffffff;
+    color: #1a1a1a;
+  }
+  
+  /* Dark Mode Card */
+  .card_dark {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Title Styling */
+  .myheading_light, .myheading_dark {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  /* Italic Text (Topic and ID) */
+  .italictext_light, .italictext_dark {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #7a7a7a;
+    margin-bottom: 15px;
+  }
+  
+  /* Main Text Content */
+  .myText_light, .myText_dark {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  /* Link Styling */
+  .link {
+    text-decoration: none;
+    font-weight: 600;
+    color: #1e90ff; /* Primary link color */
+    transition: color 0.3s;
+  }
+  
+  .link:hover {
+    color: #ff4500; /* Hover link color */
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .card_light, .card_dark {
+      width: 90%; 
+    }
+  }
+  

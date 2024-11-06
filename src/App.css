@@ -1,51 +1,42 @@
-/* .content{
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
- 
-}
-body{
-  margin:0;
-  padding: 0;
-}
-.App_light{
-background-color:#f6f3f3;
-
-
-}
-.App_dark{
-background-color: black;
-
-} */
-
-
-
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif; /* Consider using a web-safe font */
+  font-family: 'Arial', sans-serif;
+  /* Consider using a web-safe font */
+
 }
 
 .App_light {
-  background-color: #f9f9f9;
+  background-color: #f0f4f8;
+  box-sizing: border-box;
+  overflow-x: hidden;
+
 }
 
 .App_dark {
   background-color: #121212;
+  box-sizing: border-box;
+  overflow-x: hidden;
+
+
 }
 
 /* General Styles */
 .content {
   margin-top: 20px;
-  width:90%;
+  width: 98%;
+  padding: 10px;
+  flex-direction: column;
   display: flex;
-  flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
-  justify-content: center; /* Center aligns the cards */
-  padding: 20px; /* Adds padding around the content */
+  
+  justify-content: center;
+  
+ 
 }
 
 /* Responsive Card Styles */
 @media (max-width: 768px) {
   .content {
     padding: 10px;
+    flex-wrap: wrap;
   }
 }

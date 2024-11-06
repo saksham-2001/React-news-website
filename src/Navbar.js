@@ -24,7 +24,7 @@ const Navbar = ({ onTopicChange, mode }) => {
 
             <div className={`menu menu_${mode} ${menuActive ? 'active' : 'hidden'}`}>
                 {keytopics.map((topic) => (
-                    <span 
+                    <span
                         key={topic} 
                         onClick={() => handleClick(topic)} 
                         className={`keyTopic_${mode}`}

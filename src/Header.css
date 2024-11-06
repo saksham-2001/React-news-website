@@ -1,22 +1,38 @@
 .header_light,
 .header_dark {
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Center vertically */
-    justify-content: space-between; /* Space items evenly */
-    padding: 10px; /* Add some padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
     margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.header_dark {
+    margin: -8px;
+    margin-bottom: 20px;
+}
+
+.header_dark {
+    background-color: #000;
 }
 
 .appTitle_light,
 .appTitle_dark {
-    margin: 0; /* Remove default margin from header */
-    font-size: 24px; /* Adjust font size as needed */
+    margin-left: 10px;
+    font-size: 30px;
+    font-style: italic;
+}
+
+.appTitle_dark {
+    color: #fff;
+    padding-left: 10px;
 }
 
 .searchForm_light,
 .searchForm_dark {
-    display: flex; /* Keep form items in a row */
-    margin-right: 20px; /* Space between search form and toggle button */
+    display: flex;
+    margin-right: 20px;
 }
 
 .searchInput_light,
@@ -25,7 +41,7 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-right: 10px;
-    width: 200px; /* Adjust width as needed */
+    width: 200px;
 }
 
 .searchButton_light,
@@ -42,25 +58,35 @@
 .searchButton_dark:hover {
     background-color: #0056b3;
 }
-.modeIcon{
+
+.modeIcon {
     padding: 10px 15px;
     border: none;
-    width:100px;
-    /* border-radius: 200px; */
-    /* background-color: #007bff; */
+    width: 100px;
+
     color: white;
     cursor: pointer;
-    margin-left: 10px; /* Add space between the search and mode toggle buttons */
-}
-@media (max-width: 768px){
-    
-.appTitle_light,
-.appTitle_dark {
-    font-size: 20px;
+    margin-left: 10px;
 }
 
-.searchInput_light,
-.searchInput_dark {
-    width:100px
-}
+@media (max-width: 768px) {
+
+    .appTitle_light,
+    .appTitle_dark {
+        font-size: 20px;
+    }
+
+    .header_dark {
+        margin: -8px;
+        margin-bottom: 20px;
+    }
+
+    .appTitle_dark {
+        color: #fff;
+    }
+
+    .searchInput_light,
+    .searchInput_dark {
+        width: 100px
+    }
 }
